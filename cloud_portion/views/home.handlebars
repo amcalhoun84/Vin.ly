@@ -1,0 +1,98 @@
+<h1>Drink and Food Pairing</h1>
+
+<script>
+	var deleteMe = function(id) {
+		console.log(id); // read the id.
+		db.drinkslist.remove({_id: mongojs.ObjectId(id)}, function(err, drinks){
+		res.redirect('/');
+		});
+	}
+
+	var deleteSuccessful = function()
+	{
+		alert("Successfully deleted entry.");
+	}
+
+	var addSuccessful = function()
+	{
+		alert("Successfully added entry.");
+	}
+
+</script>
+
+{{status}}
+
+<br/><br/>
+
+<form action="/add" method="post">
+
+<h2> Drink Name </h2>
+
+<input type="text" name="name" required /><br />
+
+<h2> Drink Type </h2>
+
+<input type="radio" name="type" value="Beer" required />Beer<br />
+<input type="radio" name="type" value="Wine" required />Wine<br />
+<input type="radio" name="type" value="Spirit" required />Spirit<br />
+<input type="radio" name="type" value="Soft Drink" required />Soft Drink<br />
+
+<h2>Good Pairing Categories</h2>
+<input type="checkbox" name="pairing" value="White Fish" />White Fish<br />
+<input type="checkbox" name="pairing" value="Rich / Dark Fish" />Dark / Rich Fish<br />
+<input type="checkbox" name="pairing" value="White Meats" />White Meats</br />
+<input type="checkbox" name="pairing" value="Red Meats" />Red Meats</br />
+<input type="checkbox" name="pairing" value="White Fish" />White Fish<br />
+<input type="checkbox" name="pairing" value="Poultry and Fowl" />Poultry and Fowl<br />
+<input type="checkbox" name="pairing" value="Fruit" />Shellfish</br>
+<input type="checkbox" name="pairing" value="Vegetables and Crudite" />Vegetables and Crudite</br>
+<input type="checkbox" name="pairing" value="Cured Meats" />Cured Meats</br>
+
+<br/>
+<h2>Input Alcoholic Content</h2>
+
+<label> Alcohol Content </label> <input type="number" step=".1" name="alccontent" placeholder="10.5" required />
+
+
+<h2>Input Varietal or Type:</h2>
+<input type="text" name="variety" placeholder="e.g., Pilsner / Pinot Noir / Dark Rum, etc." required />
+
+<br /><br />
+
+Tell me something about this beverage:<br />
+<textarea name="flavorprofile" rows="4" cols="50" placeholder="Describe flavor profile, scent, foods that are good with it..." /></textarea>
+
+<br /><br />
+<input type="submit" value="Submit your entry!" />
+</form> 
+
+<h2>Table Results</h2>
+
+<table id="drinkTable">
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Varietal/Variety</th>
+		<th>Alcohol Content</th>
+		<th>Pairs With</th>
+		<th>Flavor Profile</th>
+	</tr>
+
+	{{#each drinksList}}
+		<tr class="drink_row">
+		<td>{{this._id}}</td>
+		<td>{{this.name}}</td>
+		<td>{{this.type}}</td>
+		<td>{{this.variety}}</td>
+		<td>{{this.alccontent}} %</td>
+		<td>{{this.pairing}}</td>
+		<td>{{this.flavorprofile}}</td>
+	<td><form action="/edit" method="get"><input type="hidden" name="edit" value={{this._id}} /><input type="Submit" value="Edit Entry" /></form></td>
+	<td><form action="/delete_drink" method="post"><input type="hidden" name="delete" value={{this._id}} /><input type="submit" value="Delete Entry" onclick="deleteSuccessful()"/></form></td>
+	</tr>
+	{{/each}}
+
+
+	
+</table>

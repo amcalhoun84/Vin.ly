@@ -1,0 +1,53 @@
+<h1> Edit Your Drink </h1>
+
+{{results}}
+{{editDrinks.flavorprofile}}
+
+
+<form action="/edit" method="post">
+
+<h2> Drink Id: {{editDrinks._id}} </h2>
+
+<input type="text" name="_id" readonly value={{editDrinks._id}}>
+
+<h2> Drink Name </h2>
+
+<input type="text" name="name" value="{{editDrinks.name}}" required /><br />
+
+<h2> Drink Type </h2>
+
+<input type="radio" name="type" value="Beer" required />Beer<br />
+<input type="radio" name="type" value="Wine" required />Wine<br />
+<input type="radio" name="type" value="Spirit" required />Spirit<br />
+<input type="radio" name="type" value="Soft Drink" required />Soft Drink<br />
+
+<h2>Good Pairing Categories</h2>
+<input type="checkbox" name="pairing" value="White Fish" />White Fish<br />
+<input type="checkbox" name="pairing" value="Rich / Dark Fish" />Dark / Rich Fish<br />
+<input type="checkbox" name="pairing" value="White Meats" />White Meats</br />
+<input type="checkbox" name="pairing" value="Red Meats" />Red Meats</br />
+<input type="checkbox" name="pairing" value="White Fish" />White Fish<br />
+<input type="checkbox" name="pairing" value="Poultry and Fowl" />Poultry and Fowl<br />
+<input type="checkbox" name="pairing" value="Fruit" />Shellfish</br>
+<input type="checkbox" name="pairing" value="Vegetables and Crudite" />Vegetables and Crudite</br>
+<input type="checkbox" name="pairing" value="Cured Meats" />Cured Meats</br>
+
+<br/>
+<h2>Input Alcoholic Content</h2>
+
+<label> Alcohol Content </label> <input type="number" step=".1" name="alccontent" value={{editDrinks.alccontent}} required />
+
+
+<h2>Input Varietal or Type:</h2>
+<input type="text" name="variety" value={{editDrinks.variety}} required />
+
+<br /><br />
+
+Tell me something about this beverage:<br />
+<textarea name="flavorprofile" rows="4" cols="50" placeholder="{{editDrinks.flavorprofile}}"
+ /></textarea>
+
+<br /><br />
+<input type="hidden" name="editnow" value={{editDrinks._id}} />
+<input type="submit" value="Submit your entry!" />
+</form> 
