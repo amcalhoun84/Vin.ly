@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/Vin.lyBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:text="Vin.ly" />
+    <TextView
+        android:id="@+id/Vin.lyBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:text="Your Personal Sommelier" />
+    <TextView
+        android:id="@+id/VinlyUser"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:text="" />
+    <TextView
+        android:id="@+id/VinlyLocale"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:text="" />
+    <Button
+        android:id="@+id/ListButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Wine List"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:id="@+id/TypeButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Find Wine By Type"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:id="@+id/RegionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Find Wine By Region"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:id="@+id/YearButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Find Wine By Year"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:id="@+id/AddButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Add Wine"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:id="@+id/EditButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Edit Wine"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:id="@+id/getPairing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pairings by Wine Type"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:id="@+id/GPSButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Find Your Location"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:id="@+id/LogOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="LogOut"
+        android:layout_marginLeft="0.0dp" />
+</LinearLayout>

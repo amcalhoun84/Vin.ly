@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/Vin.lyBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:text="Vin.ly" />
+    <TextView
+        android:id="@+id/Vin.lyBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:text="Your Personal Sommelier" />
+    <TextView
+        android:id="@+id/LogInError"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:textColor="#f00"
+        android:text="" />
+    <LinearLayout
+        android:id="@+id/VinlyLogIn"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center">
+        <TextView
+            android:layout_width="86.0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="left"
+            android:text="User Name:"
+            android:layout_marginRight="10.0dp"
+            android:elegantTextHeight="true" />
+        <EditText
+            android:id="@+id/UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="left"
+            android:layout_marginRight="0.0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/VinlyLogIn2"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="left"
+            android:text="Password:"
+            android:layout_marginRight="0.0dp"
+            android:id="@+id/textView2" />
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="left"
+            android:inputType="textPassword"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginLeft="0.0dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/Login"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Log-In" />
+    <Button
+        android:id="@+id/Clear"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Clear"
+        android:layout_marginBottom="0.0dp" />
+    <Button
+        android:id="@+id/NewUser"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="New User"
+        android:layout_marginBottom="0.0dp" />
+</LinearLayout>
